@@ -8,3 +8,9 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+puts Store.sum(:annual_revenue)
+puts Store.average(:annual_revenue)
+@big_stores = Store.where(:annual_revenue.size > 1000000)
+@big_stores.each do |store|
+  puts store.name
+end
